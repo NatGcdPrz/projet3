@@ -1,4 +1,11 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+main .presentation, main .localisation, header {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
 .btn {
   padding: 1em 1.5em;
   color: #ffffff;
@@ -13,4 +20,46 @@
 .btn:hover {
   opacity: 0.8;
   box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+}
+
+/* Début Header */
+header {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 1em;
+}
+
+h1 {
+  grid-row: 1 / auto;
+  grid-column: 1 / auto;
+  font-family: "Shrikhand", cursive;
+}
+
+/* Début Main */
+main {
+  font-family: "Roboto", sans-serif;
+  /* Debut section localisation */
+  /* Fin section localisation */
+  /* Debut section presentation */
+  /* Fin section presentation */
+}
+main .localisation {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 1em;
+  background: #eaeaea;
+  background: linear-gradient(180deg, rgba(173, 173, 173, 0.35) 0%, rgba(234, 234, 234, 0.75) 15%, rgb(234, 234, 234) 100%);
+}
+main .localisation h2 i {
+  padding: 0 0.5em 0 0;
+}
+main .presentation {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 2em 0 3em;
+  background: #f6f6f6;
+  text-align: center;
+}
+main .presentation h2 {
+  padding: 0 5em;
+}
+main .presentation p {
+  padding: 1em 5em 2em;
 }
