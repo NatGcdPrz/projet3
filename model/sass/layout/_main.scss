@@ -54,13 +54,10 @@ main {
         grid-template-columns: 1fr 1fr;
     }
 
-    .lesRestaurants {}
-
-
+    /* Fin container fonctionnement & restaurant */
 
     /* Début section fonctionnement */
     .commentCaMarche {
-
         margin: 1.5rem;
 
         & h2 {
@@ -128,5 +125,55 @@ main {
             font-size: 2rem;
         }
 
+    }
+
+    .lesRestaurants {
+
+        margin: 1.5rem;
+
+        ul {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+            row-gap: 2rem;
+        }
+
+        li {
+            background: #fff;
+            border-radius: 1rem;
+            position: relative;
+            display: block;
+            margin: 0.5rem 0;
+            box-shadow: 0.25rem 0.25rem 0.5rem #00000012;
+        }
+
+        img {
+            width: 100%;
+            height: 12rem;
+            border-radius: 1rem 1rem 0 0;
+            box-shadow: none;
+            object-fit: cover;
+        }
+
+        h3,
+        p {
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        i {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .sticker {
+            background: $aqua-tertiaire;
+            color: $txt-fond-vert;
+            padding: 0.5rem;
+            border-radius: 0.125rem;
+            position: absolute;
+            top: 1rem;
+            right: 0.75rem;
+        }
     }
 }

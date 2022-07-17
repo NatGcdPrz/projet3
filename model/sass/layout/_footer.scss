@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
+
+/* Début footer */
+footer {
+    background-color: $gris-sombre;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    @include grid-template-set($footer);
+
+    h2 {
+        font-family: "Shrikhand", cursive;
+        padding: 1.5rem;
+    }
+
+    ul,
+    li {
+        padding: 0.5rem;
+    }
+
+    i {
+        padding-right: 0.5rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
