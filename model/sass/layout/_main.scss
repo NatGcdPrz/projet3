@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
 
+body {
+    counter-reset: compteur-list-fonctionnement;
+}
 
 /* Début Main */
 main {
@@ -45,5 +48,85 @@ main {
 
     /* Fin section presentation */
 
+    /* Début container fonctionnement & restaurant */
+    .fonctionnementRestaurantContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
+    .lesRestaurants {}
+
+
+
+    /* Début section fonctionnement */
+    .commentCaMarche {
+
+        margin: 1.5rem;
+
+        & h2 {
+            font-weight: 900;
+            font-size: 200%;
+        }
+
+        & .list-item {
+            @extend %grid-left;
+            @include grid-template-set ($presentation);
+            padding: 1em 0;
+            border-radius: 30px 30px;
+            background-color: ($gris-light-clair);
+            box-shadow: -1px 12px 19px 4px ($gris-clair);
+            margin: 1.5rem 0;
+            width: 350px;
+            position: relative;
+
+            &:hover {
+                opacity: 0.8;
+                background-color: ($violet-clair);
+
+                i {
+                    color: ($violet-primaire);
+                }
+            }
+
+            &:before {
+                display: grid;
+                align-content: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $violet-primaire;
+                border-radius: 100%;
+                height: 20px;
+                width: 20px;
+                color: white;
+                counter-increment: compteur-list-fonctionnement;
+                content: counter(compteur-list-fonctionnement);
+            }
+
+            i {
+                padding: 1em;
+                color: ($gris-icon);
+            }
+
+            p {
+                font-weight: bolder;
+                font-size: larger;
+            }
+
+        }
+    }
+
+    /*  Fin section fonctionnement */
+
+    /* Début section Restaurant */
+    .lesRestaurants {
+        margin: 1.5rem;
+
+        h2 {
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+
+    }
 }
