@@ -44,8 +44,11 @@ h1 {
   font-size: 350%;
 }
 
+html,
 body {
   counter-reset: compteur-list-fonctionnement;
+  margin: 0;
+  padding: 0;
 }
 
 /* Début Main */
@@ -227,7 +230,7 @@ main .lesRestaurants a .heart-hover {
 }
 main .lesRestaurants a .heart-hover:hover {
   opacity: 1;
-  animation: myAnim 1s ease 0s 1 normal forwards;
+  animation: myAnim 1 s ease 0s 1 normal forwards;
 }
 @keyframes myAnim {
   0% {
@@ -243,6 +246,101 @@ main .lesRestaurants a i {
   top: 50%;
   font-size: 30px;
   transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1440px) and (max-width: 1720px) {
+  main .fonctionnementRestaurantContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    justify-content: center;
+  }
+  main .fonctionnementRestaurantContainer .commentCaMarche {
+    padding-left: 20px;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants {
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 10px 30px 0 30px;
+    width: auto;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants .list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants .list-item i {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 990px) and (max-width: 1440px) {
+  main .fonctionnementRestaurantContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    justify-content: center;
+  }
+  main .fonctionnementRestaurantContainer .commentCaMarche {
+    padding-left: 20px;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants {
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 10px 30px 0 30px;
+    width: auto;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants .list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants .list-item i {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 995px) {
+  main .fonctionnementRestaurantContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    padding: 0;
+  }
+  main .fonctionnementRestaurantContainer .commentCaMarche {
+    padding: 0;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants {
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 10px 30px 0 30px;
+    width: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .fonctionnementRestaurantContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    padding: 0;
+  }
+  main .fonctionnementRestaurantContainer .commentCaMarche {
+    padding-left: 20px;
+    width: 100%;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants {
+    background-color: #f6f6f6;
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 10px 30px 0 30px;
+    width: auto;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants ul {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding: 1em 0;
+  }
 }
 
 /* Début footer */

@@ -32,11 +32,3 @@
     grid-row: $row-start unquote("/") $row-end;
     grid-column: $col-start unquote("/") $col-end;
 }
-
-//Heart 
-@mixin heart {
-    position: absolute;
-    margin: 0.6rem 0rem 0rem 18.2rem;
-    font-weight: normal;
-    color: $color-heart;
-}
