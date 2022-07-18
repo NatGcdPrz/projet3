@@ -5,6 +5,7 @@ footer {
     background-color: $gris-sombre;
     font-family: 'Roboto', sans-serif;
     color: white;
+    font-size: 150%;
     @include grid-template-set($footer);
 
     h2 {

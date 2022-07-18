@@ -8,4 +8,6 @@ header {
 h1 {
     @include grid-pos-set(1, auto, 1, auto);
     font-family: 'Shrikhand', cursive;
+    font-weight: 900;
+    font-size: 350%;
 }

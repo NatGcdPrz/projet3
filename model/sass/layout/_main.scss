@@ -7,12 +7,14 @@ body {
 /* Début Main */
 main {
     font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
 
     /* Debut section localisation */
     & .localisation {
         @extend %grid-center;
         @include grid-template-set($localisation);
-        padding: 1em;
+        font-size: 120%;
+        padding: 1.5em;
         background: #eaeaea;
         background: linear-gradient(180deg,
                 rgba(173, 173, 173, .35) 0%,
@@ -36,6 +38,7 @@ main {
         padding: 2em 0 3em;
         background: #f6f6f6;
         text-align: center;
+        font-size: 150%;
 
         & h2 {
             padding: 0 5em;
@@ -52,6 +55,7 @@ main {
     .fonctionnementRestaurantContainer {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        justify-content: center;
     }
 
     /* Fin container fonctionnement & restaurant */
@@ -59,10 +63,12 @@ main {
     /* Début section fonctionnement */
     .commentCaMarche {
         margin: 1.5rem;
+        padding-left: 10%;
+        width: 80%;
 
         & h2 {
             font-weight: 900;
-            font-size: 200%;
+            font-size: 250%;
         }
 
         & .list-item {
@@ -73,8 +79,8 @@ main {
             background-color: ($gris-light-clair);
             box-shadow: -1px 12px 19px 4px ($gris-clair);
             margin: 1.5rem 0;
-            width: 350px;
             position: relative;
+            width: 80%;
 
             &:hover {
                 opacity: 0.8;
@@ -108,7 +114,7 @@ main {
 
             p {
                 font-weight: bolder;
-                font-size: larger;
+                font-size: 170%;
             }
 
         }
@@ -118,16 +124,13 @@ main {
 
     /* Début section Restaurant */
     .lesRestaurants {
+        width: 80%;
         margin: 1.5rem;
 
         h2 {
             font-weight: bolder;
-            font-size: 2rem;
+            font-size: 250%;
         }
-
-    }
-
-    .lesRestaurants {
 
         margin: 1.5rem;
 
@@ -136,6 +139,7 @@ main {
             grid-template-columns: repeat(2, 1fr);
             column-gap: 2rem;
             row-gap: 2rem;
+            padding: 1em 0;
         }
 
         li {
@@ -149,7 +153,7 @@ main {
 
         img {
             width: 100%;
-            height: 12rem;
+            height: 20rem;
             border-radius: 1rem 1rem 0 0;
             box-shadow: none;
             object-fit: cover;
@@ -159,12 +163,12 @@ main {
         p {
             text-decoration: none;
             margin: 5px;
+            color: black;
+            font-size: 150%;
+
         }
 
-        i {
-            cursor: pointer;
-            position: relative;
-        }
+        i {}
 
         .sticker {
             background: $aqua-tertiaire;
@@ -174,6 +178,76 @@ main {
             position: absolute;
             top: 1rem;
             right: 0.75rem;
+            font-size: 150%;
+            font-weight: 450;
+        }
+
+        a {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+
+            img {
+                grid-area: 1 / 1 / 4 / 6;
+            }
+
+            h3 {
+                grid-area: 4 / 1 / 5 / 4;
+                display: grid;
+                align-items: flex-end;
+                padding: 2px 0 2px 2px;
+            }
+
+            p {
+                grid-area: 5 / 1 / 6 / 4;
+                display: grid;
+                align-items: flex-start;
+                padding: 0 0 2px 2px;
+            }
+
+            .btn__like {
+                grid-area: 4 / 4 / 6 / 6;
+                position: relative;
+                display: grid;
+                align-items: center;
+                transition: all 200ms ease-in-out;
+            }
+
+            .heart-hover {
+                color: transparent;
+                background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+
+
+                &:hover {
+                    opacity: 1;
+                    animation: myAnim 1s ease 0s 1 normal forwards;
+                }
+
+                @keyframes myAnim {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            i {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                font-size: 30px;
+                transform: translate(-50%, -50%);
+            }
+
         }
     }
 }
