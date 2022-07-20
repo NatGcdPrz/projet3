@@ -1,0 +1,86 @@
+h1 {
+    font-family: 'Shrikhand', cursive;
+    font-weight: 900;
+    font-size: 7rem;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+
+.btn {
+    font-size: 1.6rem;
+
+    &__like {
+        i {
+            font-size: 2rem;
+            color: black;
+        }
+    }
+}
+
+
+
+.list-item {
+    p {
+        font-weight: 600;
+    }
+}
+
+footer {
+    font-size: 1.5rem;
+}
+
+.sticker {
+    font-weight: 450;
+    font-size: 1.5rem;
+}
+
+/* Responsive tel */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+
+    .btn {
+        font-size: 0.7rem;
+
+        &__like {
+            i {
+                font-size: 2rem;
+            }
+        }
+    }
+
+
+    footer {
+        font-size: 1.5rem;
+    }
+
+    .sticker {
+        font-size: 1.5rem;
+    }
+}

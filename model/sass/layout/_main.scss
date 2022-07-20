@@ -16,7 +16,6 @@ main {
     & .localisation {
         @extend %grid-center;
         @include grid-template-set($localisation);
-        font-size: 120%;
         padding: 1.5em;
         background: #eaeaea;
         background: linear-gradient(180deg,
@@ -24,10 +23,8 @@ main {
                 rgba(234, 234, 234, .75) 15%,
                 rgba(234, 234, 234, 1) 100%);
 
-        & h2 {
-            & i {
-                padding: 0 0.5em 0 0;
-            }
+        i {
+            padding: 0 0.5em 0 0;
         }
     }
 
@@ -41,13 +38,13 @@ main {
         padding: 2em 0 3em;
         background: #f6f6f6;
         text-align: center;
-        font-size: 150%;
 
-        & h2 {
+
+        h2 {
             padding: 0 5em;
         }
 
-        & p {
+        p {
             padding: 1em 5em 2em;
         }
     }
@@ -59,31 +56,26 @@ main {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
+        padding: 50px 0px;
     }
 
     /* Fin container fonctionnement & restaurant */
 
     /* Début section fonctionnement */
     .commentCaMarche {
-        margin: 1.5rem;
-        padding-left: 10%;
-        width: 80%;
+        width: 100%;
+        padding: 0px 30px;
 
-        & h2 {
-            font-weight: 900;
-            font-size: 250%;
-        }
-
-        & .list-item {
+        .list-item {
             @extend %grid-left;
             @include grid-template-set ($presentation);
             padding: 1em 0;
-            border-radius: 30px 30px;
+            border-radius: $border-radius;
             background-color: ($gris-light-clair);
             box-shadow: -1px 12px 19px 4px ($gris-clair);
             margin: 1.5rem 0;
             position: relative;
-            width: 80%;
+            width: 100%;
 
             &:hover {
                 opacity: 0.8;
@@ -103,8 +95,9 @@ main {
                 transform: translate(-50%, -50%);
                 background-color: $violet-primaire;
                 border-radius: 100%;
-                height: 20px;
-                width: 20px;
+                height: 30px;
+                width: 30px;
+                font-size: 1.6rem;
                 color: white;
                 counter-increment: compteur-list-fonctionnement;
                 content: counter(compteur-list-fonctionnement);
@@ -115,11 +108,6 @@ main {
                 color: ($gris-icon);
             }
 
-            p {
-                font-weight: bolder;
-                font-size: 170%;
-            }
-
         }
     }
 
@@ -127,15 +115,9 @@ main {
 
     /* Début section Restaurant */
     .lesRestaurants {
-        width: 80%;
-        margin: 1.5rem;
-
-        h2 {
-            font-weight: bolder;
-            font-size: 250%;
-        }
-
-        margin: 1.5rem;
+        width: 100%;
+        padding-top: 20px;
+        padding: 50px 30px;
 
         ul {
             display: grid !important;
@@ -167,11 +149,8 @@ main {
             text-decoration: none;
             margin: 5px;
             color: black;
-            font-size: 150%;
 
         }
-
-        i {}
 
         .sticker {
             background: $aqua-tertiaire;
@@ -181,8 +160,6 @@ main {
             position: absolute;
             top: 1rem;
             right: 0.75rem;
-            font-size: 150%;
-            font-weight: 450;
         }
 
         a {
@@ -247,14 +224,13 @@ main {
                 position: absolute;
                 right: 10px;
                 top: 50%;
-                font-size: 30px;
                 transform: translate(-50%, -50%);
             }
 
         }
     }
 
-
+    /* Responsive taille d'écran classique */
     @media screen and (min-width: 1440px) and (max-width: 1720px) {
         .fonctionnementRestaurantContainer {
             display: grid;
@@ -269,7 +245,6 @@ main {
             .lesRestaurants {
                 background-color: $gris-light-clair;
                 margin: 0;
-                padding: 10px 30px 0 30px;
                 width: auto;
 
                 .list-item {
@@ -302,7 +277,6 @@ main {
             .lesRestaurants {
                 background-color: $gris-light-clair;
                 margin: 0;
-                padding: 10px 30px 0 30px;
                 width: auto;
 
                 .list-item {
@@ -320,16 +294,12 @@ main {
         }
     }
 
+    /* Responsive tablette */
     @media screen and (min-width: 768px) and (max-width: 995px) {
         .fonctionnementRestaurantContainer {
             display: grid;
             grid-template-columns: 1fr;
             column-gap: 20px;
-            padding: 0;
-
-            .commentCaMarche {
-                padding: 0;
-            }
 
             .lesRestaurants {
                 background-color: $gris-light-clair;
@@ -340,23 +310,29 @@ main {
         }
     }
 
+    /* Responsive tel */
     @media screen and (max-width: 768px) {
+        .presentation {
+            padding: 15px;
+        }
+
         .fonctionnementRestaurantContainer {
             display: grid;
             grid-template-columns: 1fr;
             column-gap: 20px;
-            padding: 0;
 
             .commentCaMarche {
-                padding-left: 20px;
                 width: 100%;
+
+                .list-item {
+                    border-radius: 20px;
+                }
             }
 
             .lesRestaurants {
                 background-color: $gris-light-clair;
                 background-color: $gris-light-clair;
                 margin: 0;
-                padding: 10px 30px 0 30px;
                 width: auto;
 
                 ul {

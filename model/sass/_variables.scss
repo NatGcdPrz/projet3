@@ -34,3 +34,12 @@ $grid-columns-presentation: 1;
 $grid-columns-commentCaMarche: 3;
 $grid-columns-lesRestaurants: 4;
 $grid-columns-footer: 3;
+
+//Padding 
+$padding-default: 20px;
+
+$border-radius: 30px;
+
+@media screen and (max-width: 768px) {
+    $border-radius: 20px;
+}
