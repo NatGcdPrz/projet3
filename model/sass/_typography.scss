@@ -1,12 +1,12 @@
 h1 {
     font-family: 'Shrikhand', cursive;
     font-weight: 900;
-    font-size: 7rem;
+    font-size: 6rem;
 }
 
 h2 {
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 h3 {
@@ -46,6 +46,25 @@ footer {
     font-size: 1.5rem;
 }
 
+/* Responsive tablette */
+@media screen and (min-width: 768px) and (max-width: 995px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
 /* Responsive tel */
 @media screen and (max-width: 768px) {
     h1 {
@@ -53,16 +72,17 @@ footer {
     }
 
     h2 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     h3 {
-        font-size: 2rem;
+        font-size: 1.1rem;
     }
 
     p {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
+
 
 
     .btn {
@@ -70,17 +90,17 @@ footer {
 
         &__like {
             i {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
     }
 
 
     footer {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .sticker {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }

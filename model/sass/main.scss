@@ -2,8 +2,8 @@
 @import '_mixins';
 @import '_placeholders';
 @import '_components';
+@import './typography';
 
 @import './layout/header';
 @import './layout/main';
 @import './layout/footer';
-@import './layout/typography';

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     counter-reset: compteur-list-fonctionnement;
@@ -32,7 +36,7 @@ main {
 
 
     /* Debut section presentation */
-    .presentation {
+    & .presentation {
         @extend %grid-center;
         @include grid-template-set ($presentation);
         padding: 2em 0 3em;
@@ -52,34 +56,36 @@ main {
     /* Fin section presentation */
 
     /* Début container fonctionnement & restaurant */
-    .fonctionnementRestaurantContainer {
+    & .fonctionnementRestaurantContainer {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        justify-content: center;
         padding: 50px 0px;
+        padding-bottom: 0;
     }
 
     /* Fin container fonctionnement & restaurant */
 
     /* Début section fonctionnement */
-    .commentCaMarche {
-        width: 100%;
+    & .commentCaMarche {
+
+        width: 70%;
         padding: 0px 30px;
+        margin: auto;
 
         .list-item {
             @extend %grid-left;
             @include grid-template-set ($presentation);
             padding: 1em 0;
-            border-radius: $border-radius;
+            border-radius: 20px;
             background-color: ($gris-light-clair);
             box-shadow: -1px 12px 19px 4px ($gris-clair);
             margin: 1.5rem 0;
             position: relative;
-            width: 100%;
+
+
 
             &:hover {
-                opacity: 0.8;
-                background-color: ($violet-clair);
+                background-color: lighten($violet-primaire, 35%);
 
                 i {
                     color: ($violet-primaire);
@@ -114,10 +120,9 @@ main {
     /*  Fin section fonctionnement */
 
     /* Début section Restaurant */
-    .lesRestaurants {
+    & .lesRestaurants {
         width: 100%;
-        padding-top: 20px;
-        padding: 50px 30px;
+        padding: 50px 30px 0 30px;
 
         ul {
             display: grid !important;
@@ -230,6 +235,25 @@ main {
         }
     }
 
+
+    & .menuDuResto {
+        margin-top: -4rem;
+        border-radius: 2rem 2rem 0 0;
+        background-color: #f6f6f6;
+        z-index: 1;
+        position: relative;
+
+        img {
+            max-width: 100%;
+            max-height: 20rem;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .menuDuResto__carte {}
+
+    }
+
     /* Responsive taille d'écran classique */
     @media screen and (min-width: 1440px) and (max-width: 1720px) {
         .fonctionnementRestaurantContainer {
@@ -246,11 +270,14 @@ main {
                 background-color: $gris-light-clair;
                 margin: 0;
                 width: auto;
+                padding-top: 20px;
+                padding: 50px 30px;
 
                 .list-item {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    width: 100%;
 
                     i {
                         justify-content: flex-start;
@@ -278,11 +305,14 @@ main {
                 background-color: $gris-light-clair;
                 margin: 0;
                 width: auto;
+                padding-top: 20px;
+                padding: 50px 30px;
 
                 .list-item {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    width: 100%;
 
                     i {
                         justify-content: flex-start;
@@ -304,8 +334,11 @@ main {
             .lesRestaurants {
                 background-color: $gris-light-clair;
                 margin: 0;
-                padding: 10px 30px 0 30px;
-                width: auto;
+                padding: 50px 30px 0 30px;
+
+                .list-item {
+                    width: 100%;
+                }
             }
         }
     }
@@ -324,8 +357,16 @@ main {
             .commentCaMarche {
                 width: 100%;
 
+
                 .list-item {
                     border-radius: 20px;
+                    width: 100%;
+
+                    &:before {
+                        height: 15px;
+                        width: 15px;
+                        font-size: 0.7rem;
+                    }
                 }
             }
 
@@ -334,14 +375,31 @@ main {
                 background-color: $gris-light-clair;
                 margin: 0;
                 width: auto;
+                padding: 50px 20px 30px 20px;
+
+                a {
+                    img {
+                        height: 10rem;
+                    }
+                }
 
                 ul {
                     display: grid !important;
                     grid-template-columns: repeat(1, 1fr);
                     column-gap: 2rem;
-                    row-gap: 2rem;
+                    row-gap: 0.5rem;
                     padding: 1em 0;
                 }
+
+                h3 {
+                    margin: 15px 5px 0 5px;
+                }
+
+
+                p {
+                    margin: 0 0 15px 5px;
+                }
+
             }
         }
     }

@@ -17,7 +17,9 @@ main .commentCaMarche .list-item {
   padding: 1em 1.5em;
   color: #ffffff;
   transition: 250ms;
-  font-size: 110%;
+}
+.btn:focus-visible {
+  outline: none !important;
 }
 .btn--gradient {
   background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%);
@@ -30,6 +32,95 @@ main .commentCaMarche .list-item {
   box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
 }
 
+.list-item {
+  padding: 1.5em 1em;
+  text-align: left;
+  border-radius: 1em;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-size: 6rem;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+.btn {
+  font-size: 1.6rem;
+}
+.btn__like i {
+  font-size: 2rem;
+  color: black;
+}
+
+.list-item p {
+  font-weight: 600;
+}
+
+footer {
+  font-size: 1.5rem;
+}
+
+.sticker {
+  font-weight: 450;
+  font-size: 1.5rem;
+}
+
+/* Responsive tablette */
+@media screen and (min-width: 768px) and (max-width: 995px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+/* Responsive tel */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .btn {
+    font-size: 0.7rem;
+  }
+  .btn__like i {
+    font-size: 1.5rem;
+  }
+  footer {
+    font-size: 1rem;
+  }
+  .sticker {
+    font-size: 1rem;
+  }
+}
 /* Début Header */
 header {
   grid-template-columns: repeat(1, 1fr);
@@ -39,9 +130,18 @@ header {
 h1 {
   grid-row: 1 / auto;
   grid-column: 1 / auto;
-  font-family: "Shrikhand", cursive;
-  font-weight: 900;
-  font-size: 350%;
+}
+h1.btn__retourHome {
+  position: relative;
+}
+h1.btn__retourHome i {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html,
@@ -64,15 +164,17 @@ main {
   /* Début section fonctionnement */
   /*  Fin section fonctionnement */
   /* Début section Restaurant */
+  /* Responsive taille d'écran classique */
+  /* Responsive tablette */
+  /* Responsive tel */
 }
 main .localisation {
   grid-template-columns: repeat(1, 1fr);
-  font-size: 120%;
   padding: 1.5em;
   background: #eaeaea;
   background: linear-gradient(180deg, rgba(173, 173, 173, 0.35) 0%, rgba(234, 234, 234, 0.75) 15%, rgb(234, 234, 234) 100%);
 }
-main .localisation h2 i {
+main .localisation i {
   padding: 0 0.5em 0 0;
 }
 main .presentation {
@@ -80,7 +182,6 @@ main .presentation {
   padding: 2em 0 3em;
   background: #f6f6f6;
   text-align: center;
-  font-size: 150%;
 }
 main .presentation h2 {
   padding: 0 5em;
@@ -91,30 +192,25 @@ main .presentation p {
 main .fonctionnementRestaurantContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
+  padding: 50px 0px;
+  padding-bottom: 0;
 }
 main .commentCaMarche {
-  margin: 1.5rem;
-  padding-left: 10%;
-  width: 80%;
-}
-main .commentCaMarche h2 {
-  font-weight: 900;
-  font-size: 250%;
+  width: 70%;
+  padding: 0px 30px;
+  margin: auto;
 }
 main .commentCaMarche .list-item {
   grid-template-columns: repeat(1, 1fr);
   padding: 1em 0;
-  border-radius: 30px 30px;
+  border-radius: 20px;
   background-color: #f6f6f6;
   box-shadow: -1px 12px 19px 4px #e2e2e2;
   margin: 1.5rem 0;
   position: relative;
-  width: 80%;
 }
 main .commentCaMarche .list-item:hover {
-  opacity: 0.8;
-  background-color: #f5edff;
+  background-color: #f2eafb;
 }
 main .commentCaMarche .list-item:hover i {
   color: #9356DC;
@@ -128,8 +224,9 @@ main .commentCaMarche .list-item:before {
   transform: translate(-50%, -50%);
   background-color: #9356DC;
   border-radius: 100%;
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
+  font-size: 1.6rem;
   color: white;
   counter-increment: compteur-list-fonctionnement;
   content: counter(compteur-list-fonctionnement);
@@ -138,18 +235,9 @@ main .commentCaMarche .list-item i {
   padding: 1em;
   color: #7e7e7e;
 }
-main .commentCaMarche .list-item p {
-  font-weight: bolder;
-  font-size: 170%;
-}
 main .lesRestaurants {
-  width: 80%;
-  margin: 1.5rem;
-  margin: 1.5rem;
-}
-main .lesRestaurants h2 {
-  font-weight: bolder;
-  font-size: 250%;
+  width: 100%;
+  padding: 50px 30px 0 30px;
 }
 main .lesRestaurants ul {
   display: grid !important;
@@ -178,7 +266,6 @@ main .lesRestaurants p {
   text-decoration: none;
   margin: 5px;
   color: black;
-  font-size: 150%;
 }
 main .lesRestaurants .sticker {
   background: #99E2D0;
@@ -188,8 +275,6 @@ main .lesRestaurants .sticker {
   position: absolute;
   top: 1rem;
   right: 0.75rem;
-  font-size: 150%;
-  font-weight: 450;
 }
 main .lesRestaurants a {
   display: grid;
@@ -244,8 +329,20 @@ main .lesRestaurants a i {
   position: absolute;
   right: 10px;
   top: 50%;
-  font-size: 30px;
   transform: translate(-50%, -50%);
+}
+main .menuDuResto {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+}
+main .menuDuResto img {
+  max-width: 100%;
+  max-height: 20rem;
+  width: 100%;
+  object-fit: cover;
 }
 @media screen and (min-width: 1440px) and (max-width: 1720px) {
   main .fonctionnementRestaurantContainer {
@@ -260,13 +357,15 @@ main .lesRestaurants a i {
   main .fonctionnementRestaurantContainer .lesRestaurants {
     background-color: #f6f6f6;
     margin: 0;
-    padding: 10px 30px 0 30px;
     width: auto;
+    padding-top: 20px;
+    padding: 50px 30px;
   }
   main .fonctionnementRestaurantContainer .lesRestaurants .list-item {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   main .fonctionnementRestaurantContainer .lesRestaurants .list-item i {
     justify-content: flex-start;
@@ -286,13 +385,15 @@ main .lesRestaurants a i {
   main .fonctionnementRestaurantContainer .lesRestaurants {
     background-color: #f6f6f6;
     margin: 0;
-    padding: 10px 30px 0 30px;
     width: auto;
+    padding-top: 20px;
+    padding: 50px 30px;
   }
   main .fonctionnementRestaurantContainer .lesRestaurants .list-item {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   main .fonctionnementRestaurantContainer .lesRestaurants .list-item i {
     justify-content: flex-start;
@@ -304,42 +405,59 @@ main .lesRestaurants a i {
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 20px;
-    padding: 0;
-  }
-  main .fonctionnementRestaurantContainer .commentCaMarche {
-    padding: 0;
   }
   main .fonctionnementRestaurantContainer .lesRestaurants {
     background-color: #f6f6f6;
     margin: 0;
-    padding: 10px 30px 0 30px;
-    width: auto;
+    padding: 50px 30px 0 30px;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants .list-item {
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
+  main .presentation {
+    padding: 15px;
+  }
   main .fonctionnementRestaurantContainer {
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 20px;
-    padding: 0;
   }
   main .fonctionnementRestaurantContainer .commentCaMarche {
-    padding-left: 20px;
     width: 100%;
+  }
+  main .fonctionnementRestaurantContainer .commentCaMarche .list-item {
+    border-radius: 20px;
+    width: 100%;
+  }
+  main .fonctionnementRestaurantContainer .commentCaMarche .list-item:before {
+    height: 15px;
+    width: 15px;
+    font-size: 0.7rem;
   }
   main .fonctionnementRestaurantContainer .lesRestaurants {
     background-color: #f6f6f6;
     background-color: #f6f6f6;
     margin: 0;
-    padding: 10px 30px 0 30px;
     width: auto;
+    padding: 50px 20px 30px 20px;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants a img {
+    height: 10rem;
   }
   main .fonctionnementRestaurantContainer .lesRestaurants ul {
     display: grid !important;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 2rem;
-    row-gap: 2rem;
+    row-gap: 0.5rem;
     padding: 1em 0;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants h3 {
+    margin: 15px 5px 0 5px;
+  }
+  main .fonctionnementRestaurantContainer .lesRestaurants p {
+    margin: 0 0 15px 5px;
   }
 }
 
@@ -348,12 +466,11 @@ footer {
   background-color: #353535;
   font-family: "Roboto", sans-serif;
   color: white;
-  font-size: 150%;
   grid-template-columns: repeat(3, 1fr);
 }
 footer h2 {
   font-family: "Shrikhand", cursive;
-  padding: 1.5rem;
+  padding: 25px 0 10px 15px;
 }
 footer ul,
 footer li {
