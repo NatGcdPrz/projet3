@@ -32,3 +32,10 @@
     grid-row: $row-start unquote("/") $row-end;
     grid-column: $col-start unquote("/") $col-end;
 }
+
+
+
+//Animation delay
+@mixin animationDelay($delay) {
+    animation: fadeIn 1s ease $delay;
+}

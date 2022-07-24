@@ -7,14 +7,17 @@ header {
 
 h1 {
     @include grid-pos-set(1, auto, 1, auto);
+}
 
-    &.btn__retourHome {
-        position: relative;
-
-        i {
-            position: absolute;
-            top: 50px;
-            left: 20px;
-        }
-    }
+/* Début Header à la Française */
+.btn__retourHome {
+    position: absolute;
+    left: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #000;
 }
