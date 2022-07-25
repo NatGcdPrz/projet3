@@ -71,8 +71,14 @@ footer {
         font-size: 2rem;
     }
 
+    .localisation {
+        h2 {
+            font-size: 1rem;
+        }
+    }
+
     h2 {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     h3 {
@@ -83,12 +89,26 @@ footer {
         font-size: 1rem;
     }
 
+    .btn {
+        font-size: 1rem;
+    }
 
-    .menuDuResto__carte {
+    .sticker {
+        font-size: 1rem;
+    }
 
-        h2 {
-
-            font-size: 2rem;
+    .btn__like {
+        i {
+            font-size: 1.5rem;
         }
+    }
+
+}
+
+.menuDuResto__carte {
+
+    h2 {
+
+        font-size: 2rem;
     }
 }

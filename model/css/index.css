@@ -100,8 +100,11 @@ footer {
   h1 {
     font-size: 2rem;
   }
+  .localisation h2 {
+    font-size: 1rem;
+  }
   h2 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
   h3 {
     font-size: 1.1rem;
@@ -109,10 +112,20 @@ footer {
   p {
     font-size: 1rem;
   }
-  .menuDuResto__carte h2 {
-    font-size: 2rem;
+  .btn {
+    font-size: 1rem;
+  }
+  .sticker {
+    font-size: 1rem;
+  }
+  .btn__like i {
+    font-size: 1.5rem;
   }
 }
+.menuDuResto__carte h2 {
+  font-size: 2rem;
+}
+
 /* Début Header */
 header {
   grid-template-columns: repeat(1, 1fr);
@@ -670,8 +683,14 @@ main .menuDuResto a {
 }
 /* Responsive tel */
 @media screen and (max-width: 768px) {
-  .presentation {
+  main .presentation {
     padding: 15px;
+  }
+  main .presentation h2 {
+    padding: 0 1rem;
+  }
+  main .presentation p {
+    padding: 1em 2em 2em;
   }
   .fonctionnementRestaurantContainer {
     display: grid;
@@ -680,6 +699,7 @@ main .menuDuResto a {
   }
   .fonctionnementRestaurantContainer .commentCaMarche {
     width: 100%;
+    padding: 0 30px;
   }
   .fonctionnementRestaurantContainer .commentCaMarche .list-item {
     border-radius: 20px;
@@ -712,6 +732,9 @@ main .menuDuResto a {
   }
   .fonctionnementRestaurantContainer .lesRestaurants p {
     margin: 0 0 15px 5px;
+  }
+  footer ul {
+    font-size: 1rem;
   }
 }
 @keyframes checkSpin {

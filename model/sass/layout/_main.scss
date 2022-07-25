@@ -627,8 +627,19 @@ main {
 
 /* Responsive tel */
 @media screen and (max-width: 768px) {
-    .presentation {
-        padding: 15px;
+
+    main {
+        .presentation {
+            padding: 15px;
+
+            h2 {
+                padding: 0 1rem;
+            }
+
+            p {
+                padding: 1em 2em 2em;
+            }
+        }
     }
 
     .fonctionnementRestaurantContainer {
@@ -638,6 +649,7 @@ main {
 
         .commentCaMarche {
             width: 100%;
+            padding: 0 30px;
 
 
             .list-item {
@@ -684,6 +696,13 @@ main {
 
         }
     }
+
+    footer {
+        ul {
+            font-size: 1rem;
+        }
+    }
+
 }
 
 @keyframes checkSpin {
