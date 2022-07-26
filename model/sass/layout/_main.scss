@@ -266,12 +266,12 @@ main {
 
             h2 {
                 font-family: Shrikhand, "cursive";
-                padding: 3rem 2rem 1rem 1rem;
+                padding: 2rem 2rem 1rem 1rem;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 position: relative;
-                font-size: 2rem;
+                font-size: 1.7rem;
 
                 button {
                     position: relative;
@@ -316,7 +316,7 @@ main {
             h3 {
                 text-transform: uppercase;
                 position: relative;
-                padding: 2rem 0 0 1.5rem;
+                padding: 2rem 0 0.5rem 1.5rem;
                 font-weight: 400;
 
                 &::after {
@@ -334,7 +334,7 @@ main {
             }
 
             li {
-                margin: 2rem 0;
+                margin: 1rem 0;
                 background: white;
                 display: flex;
                 align-items: center;
@@ -518,7 +518,7 @@ main {
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(-20%);
+        transform: translateY(20%);
     }
 
     100% {
@@ -629,8 +629,18 @@ main {
 @media screen and (max-width: 768px) {
 
     main {
+
+        /*Page d'accueil*/
+        .localisation {
+            padding: 1em 2em 1em 1.5em;
+
+            i {
+                padding-right: 15px;
+            }
+        }
+
         .presentation {
-            padding: 15px;
+            padding: 40px 0 60px 0;
 
             h2 {
                 padding: 0 1rem;
@@ -638,6 +648,7 @@ main {
 
             p {
                 padding: 1em 2em 2em;
+                color: $gris-titre;
             }
         }
     }
@@ -649,17 +660,22 @@ main {
 
         .commentCaMarche {
             width: 100%;
-            padding: 0 30px;
+            padding: 0 25px 50px 25px;
 
 
             .list-item {
                 border-radius: 20px;
                 width: 100%;
 
+                i {
+                    padding: 1em 1.5em 1em 1.7em;
+                    font-size: 1.2em;
+                }
+
                 &:before {
-                    height: 15px;
-                    width: 15px;
-                    font-size: 0.7rem;
+                    height: 25px;
+                    width: 25px;
+                    font-size: 0.9rem;
                 }
             }
         }
@@ -694,6 +710,10 @@ main {
                 margin: 0 0 15px 5px;
             }
 
+            .sticker {
+                padding: 0.5rem 1rem 0.5rem 1rem;
+            }
+
         }
     }
 
@@ -703,6 +723,34 @@ main {
         }
     }
 
+    /*Page resto*/
+    main {
+        .menuDuResto {
+            .menuDuResto__carte {
+                h3::after {
+                    width: 45px;
+                }
+
+                li {
+                    height: 80px;
+
+                    .list-item-content {
+                        h4 {
+                            font-size: 1.3rem;
+                        }
+
+                        p {
+                            font-size: 1.2rem;
+                        }
+
+                        strong {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes checkSpin {

@@ -103,29 +103,38 @@ footer {
   .localisation h2 {
     font-size: 1rem;
   }
+  .list-item p {
+    font-size: 1.1rem;
+  }
   h2 {
     font-size: 1.5rem;
   }
   h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .btn {
     font-size: 1rem;
   }
   .sticker {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .btn__like i {
     font-size: 1.5rem;
   }
+  footer h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .fa-utensils {
+    font-size: 1rem;
+  }
+  .fa-hands-helping {
+    font-size: 0.7rem;
+  }
 }
-.menuDuResto__carte h2 {
-  font-size: 2rem;
-}
-
 /* Début Header */
 header {
   grid-template-columns: repeat(1, 1fr);
@@ -155,6 +164,14 @@ h1 {
   color: #000;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    padding-top: 10px;
+  }
+  .localisation h2 {
+    color: #3a3a3a;
+  }
+}
 /* ../ = retour en arrière */
 * {
   box-sizing: border-box;
@@ -368,12 +385,12 @@ main .menuDuResto .menuDuResto__carte {
 }
 main .menuDuResto .menuDuResto__carte h2 {
   font-family: Shrikhand, "cursive";
-  padding: 3rem 2rem 1rem 1rem;
+  padding: 2rem 2rem 1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 main .menuDuResto .menuDuResto__carte h2 button {
   position: relative;
@@ -405,7 +422,7 @@ main .menuDuResto .menuDuResto__carte h2 .heart-hover {
 main .menuDuResto .menuDuResto__carte h3 {
   text-transform: uppercase;
   position: relative;
-  padding: 2rem 0 0 1.5rem;
+  padding: 2rem 0 0.5rem 1.5rem;
   font-weight: 400;
 }
 main .menuDuResto .menuDuResto__carte h3::after {
@@ -420,7 +437,7 @@ main .menuDuResto .menuDuResto__carte ul {
   padding: 0 1rem;
 }
 main .menuDuResto .menuDuResto__carte li {
-  margin: 2rem 0;
+  margin: 1rem 0;
   background: white;
   display: flex;
   align-items: center;
@@ -596,7 +613,7 @@ main .menuDuResto a {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-20%);
+    transform: translateY(20%);
   }
   100% {
     opacity: 1;
@@ -683,14 +700,24 @@ main .menuDuResto a {
 }
 /* Responsive tel */
 @media screen and (max-width: 768px) {
+  main {
+    /*Page d'accueil*/
+  }
+  main .localisation {
+    padding: 1em 2em 1em 1.5em;
+  }
+  main .localisation i {
+    padding-right: 15px;
+  }
   main .presentation {
-    padding: 15px;
+    padding: 40px 0 60px 0;
   }
   main .presentation h2 {
     padding: 0 1rem;
   }
   main .presentation p {
     padding: 1em 2em 2em;
+    color: #626262;
   }
   .fonctionnementRestaurantContainer {
     display: grid;
@@ -699,16 +726,20 @@ main .menuDuResto a {
   }
   .fonctionnementRestaurantContainer .commentCaMarche {
     width: 100%;
-    padding: 0 30px;
+    padding: 0 25px 50px 25px;
   }
   .fonctionnementRestaurantContainer .commentCaMarche .list-item {
     border-radius: 20px;
     width: 100%;
   }
+  .fonctionnementRestaurantContainer .commentCaMarche .list-item i {
+    padding: 1em 1.5em 1em 1.7em;
+    font-size: 1.2em;
+  }
   .fonctionnementRestaurantContainer .commentCaMarche .list-item:before {
-    height: 15px;
-    width: 15px;
-    font-size: 0.7rem;
+    height: 25px;
+    width: 25px;
+    font-size: 0.9rem;
   }
   .fonctionnementRestaurantContainer .lesRestaurants {
     background-color: #f6f6f6;
@@ -733,8 +764,27 @@ main .menuDuResto a {
   .fonctionnementRestaurantContainer .lesRestaurants p {
     margin: 0 0 15px 5px;
   }
+  .fonctionnementRestaurantContainer .lesRestaurants .sticker {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
   footer ul {
     font-size: 1rem;
+  }
+  /*Page resto*/
+  main .menuDuResto .menuDuResto__carte h3::after {
+    width: 45px;
+  }
+  main .menuDuResto .menuDuResto__carte li {
+    height: 80px;
+  }
+  main .menuDuResto .menuDuResto__carte li .list-item-content h4 {
+    font-size: 1.3rem;
+  }
+  main .menuDuResto .menuDuResto__carte li .list-item-content p {
+    font-size: 1.2rem;
+  }
+  main .menuDuResto .menuDuResto__carte li .list-item-content strong {
+    font-size: 1.1rem;
   }
 }
 @keyframes checkSpin {
@@ -747,7 +797,7 @@ main .menuDuResto a {
 }
 /* Début footer */
 footer {
-  background-color: #353535;
+  background-color: #3a3a3a;
   font-family: "Roboto", sans-serif;
   color: white;
   grid-template-columns: repeat(3, 1fr);
@@ -755,6 +805,7 @@ footer {
 footer h2 {
   font-family: "Shrikhand", cursive;
   padding: 25px 0 10px 15px;
+  font-weight: 400;
 }
 footer ul,
 footer li {

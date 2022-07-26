@@ -77,16 +77,22 @@ footer {
         }
     }
 
+    .list-item {
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
     h2 {
         font-size: 1.5rem;
     }
 
     h3 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .btn {
@@ -94,7 +100,7 @@ footer {
     }
 
     .sticker {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .btn__like {
@@ -103,12 +109,19 @@ footer {
         }
     }
 
-}
-
-.menuDuResto__carte {
-
-    h2 {
-
-        font-size: 2rem;
+    footer {
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
     }
+
+    .fa-utensils {
+        font-size: 1rem;
+    }
+
+    .fa-hands-helping {
+        font-size: 0.7rem;
+    }
+
 }
