@@ -32,3 +32,50 @@
     border-radius: 1em;
     box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
 }
+
+
+/*LOADER*/
+.loader {
+    position: fixed;
+    display: grid;
+    place-items: center;
+    inset: 0;
+    height: 100vh;
+    z-index: 2;
+    background-color: #ffffff;
+    opacity: 0.9;
+    animation: disappear 200ms $duration-spinner forwards;
+    transform-origin: top;
+
+    .spinner {
+        width: 88px;
+        height: 88px;
+        display: grid;
+        border: 7px solid #0000;
+        border-radius: 50%;
+        border-color: #efdbef #0000;
+        animation: spinner-load 1s infinite linear;
+    }
+
+    .spinner::before,
+    .spinner::after {
+        content: "";
+        grid-area: 1/1;
+        margin: 3.5px;
+        border: inherit;
+        border-radius: 50%;
+    }
+
+    .spinner::before {
+        border-color: #ab23fb #0000;
+        animation: inherit;
+        animation-duration: 0.5s;
+        animation-direction: reverse;
+    }
+
+    .spinner::after {
+        margin: 14px;
+    }
+
+
+}

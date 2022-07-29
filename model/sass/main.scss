@@ -2,7 +2,8 @@
 @import '_mixins';
 @import '_placeholders';
 @import '_components';
-@import './typography';
+@import '_typography';
+@import '_animation';
 
 @import './layout/header';
 @import './layout/main';
